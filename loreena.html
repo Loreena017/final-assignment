@@ -106,15 +106,33 @@
         height: 400px;
         object-fit: cover;
       }
-
+      
       .about-text {
         width: 50%;
-        font-size: 18px;
+      }
+
+      /* Paper background for About section */
+      .paper-bg {
+        background-image: url("paper.jpg");
+        background-size: cover;
+        background-position: center;
+        padding: 40px 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: rgba(255, 255, 255, 0.9);
-        padding: 20px;
+        border: 1px solid rgba(0,0,0,0.2);
+        line-height: 1.5;
+      }
+
+      .paper-bg h2 {
+        margin-bottom: 20px;
+      }
+
+      /* More Section */
+      .more img {
+        width: 100%;
+        height: auto;
+        display: block;
       }
 
       /* Portfolio Container */
@@ -174,6 +192,10 @@
         .about-text {
           width: 100%;
         }
+        
+        .container {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
@@ -202,15 +224,24 @@
       <!-- About Section -->
       <div class="about">
         <img src="loreena-min.jpeg" alt="Loreena">
-        <div class="about-text">
+        <div class="about-text paper-bg">
           <h2>Hi I am Loreena!</h2>
-          <p>I am currently a GBDA student at the University of Waterloo, where I focus on game design, interactive media, and digital arts. I enjoy creating immersive experiences and exploring how design can tell engaging stories. This portfolio showcases my projects, including game prototypes, 3D models, and UX/UI designs. I am passionate about combining creativity and technology to solve problems and deliver unique digital experiences.</p>
+          <p>
+            I am currently a GBDA student at the University of Waterloo, where I focus on game design, interactive media, and digital arts. I enjoy creating immersive experiences and exploring how design can tell engaging stories. This portfolio showcases my projects, including game prototypes, 3D models, and UX/UI designs. I am passionate about combining creativity and technology to solve problems and deliver unique digital experiences.
+          </p>
         </div>
       </div>
 
-      <!-- Portfolio -->
+      <!-- More Section -->
       <div class="more">
-
+        <img class="more" src="montreal.jpeg" alt="background">
       </div>
-
+      
       <!-- Footer -->
+      <footer>
+        © 2025 Loreena Lin — All Rights Reserved
+      </footer>
+
+    </div>
+  </body>
+</html>
