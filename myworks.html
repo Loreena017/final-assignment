@@ -1,266 +1,262 @@
 <!DOCTYPE html>
 <html lang="en-CA">
-  <head>
-    <meta charset="utf-8">
-    <title>Assignment 3: Personal Webpage Design and Implementation</title>
-    <!--created by Loreena-->
+<head>
+  <meta charset="utf-8">
+  <title>Assignment 3: Personal Webpage Design and Implementation</title>
+  <!--created by Loreena-->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <style>
-      /* General Body Styles */
-      body {
-        font-family: "Open Sans", sans-serif;
-        font-size: 16px;
-        background-color: white;
-        margin: 0;
-        padding: 0;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Open Sans", sans-serif;
+      font-size: 16px;
+      background-color: white;
+    }
+
+    .wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: white;
+      border: 1px solid black;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav li {
+      margin: 0 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-family: "Raleway", sans-serif;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: red;
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      width: 100%;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+      opacity: 50%;
+    }
+
+    .hero h2 {
+      position: absolute;
+      top: 50%;
+      right: 5%;
+      transform: translateY(-50%);
+      color: white;
+      font-family: "Oswald", sans-serif;
+      font-size: 50px;
+      text-align: right;
+      -webkit-text-stroke: 2px black;
+    }
+
+    /* Headings and Paragraphs */
+    h3 {
+      font-size: 32px;
+      text-align: left;
+      color: black;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 16px;
+      padding: 10px 0;
+    }
+
+    /* Art / Works Grid */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .container div {
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .art-small {
+      width: 350px;
+      height: auto;
+    }
+
+    .adjust-art {
+      width: 350px;
+      height: 60%;
+      object-fit: cover;
+    }
+
+    .red-bg {
+      background-color: #8B0000;
+      width: 350px;
+      height: 60%;
+      object-fit: cover;
+    }
+
+    /* Footer */
+    footer {
+      font-family: "Oswald", sans-serif;
+      font-weight: 500;
+      text-align: center;
+      font-size: 35px;
+      background-color: white;
+      padding: 20px;
+      color: black;
+      border: 1px solid black;
+      width: 100%;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 30px;
       }
 
-      .wrapper {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 0;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      /* Navigation */
       nav {
-        background-color: white;
-        border: 1px solid black;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        flex-direction: column;
+        align-items: flex-start;
       }
 
       nav ul {
-        list-style: none;
-        display: flex;
+        flex-direction: column;
+        width: 100%;
       }
 
       nav li {
-        margin: 0 10px;
-      }
-
-      nav a {
-        text-decoration: none;
-        color: black;
-        font-family: "Raleway", sans-serif;
-        font-weight: 500;
-      }
-
-      nav a:hover {
-        color: red;
-        text-decoration: underline;
-      }
-
-      .hero {
-        position: relative;
-        width: 100%;
-      }
-
-      .hero img {
-        opacity: 50%;
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-        display: block;
-      }
-
-      .hero h2 {
-        position: absolute;
-        top: 50%;
-        right: 5%;
-        transform: translateY(-50%);
-        color: white;
-        font-family: "Oswald", sans-serif;
-        font-size: 50px;
-        text-align: right;
-        -webkit-text-stroke: 2px black;
-      }
-
-      h3 {
-        font-size: 32px;
-        text-align: left;
-        color: black;
-        padding: 10px;
-        margin: 10px;
-      }
-
-      p {
-        font-size: 16px;
-        padding: 20px;
+        margin: 5px 0;
       }
 
       .container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .art-small,
+      .adjust-art,
+      .red-bg {
         width: 100%;
-      }
-
-      .container div {
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        text-align: center;
-      }
-
-      .art-small {
-        width: 350px;
         height: auto;
       }
+    }
+  </style>
+</head>
 
-      .adjust-art {
-        width: 350px;
-        height: 60%;
-        object-fit: cover;
-      }
-      
-      .red-bg {
-        background-color: #8B0000;
-        width: 350px;
-        height: 60%;
-        object-fit: cover;
-      }
+<body>
+  <div class="wrapper">
 
-      /* Footer */
-      footer {
-        font-family: "Oswald", sans-serif;
-        font-weight: 500;
-        text-align: center;
-        font-size: 35px;
-        background-color: white;
-        padding: 20px;
-        color: black;
-        border: 1px solid black;
-        width: 100%;
-      }
+    <!-- Navigation -->
+    <nav>
+      <ul class="nav-left">
+        <li><a href="index.html">Loreena</a></li>
+      </ul>
+      <ul class="nav-right">
+        <li><a href="myworks.html">My works</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="getintouch.html">Get in Touch!</a></li>
+      </ul>
+    </nav>
 
-      @media (max-width: 600px) {
-        .hero h2 {
-          font-size: 30px;
-        }
-
-        nav {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        nav ul {
-          flex-direction: column;
-          width: 100%;
-        }
-
-        nav li {
-          margin: 5px 0;
-        }
-
-        .about {
-          flex-direction: column;
-        }
-
-        .about img,
-        .about-text {
-          width: 100%;
-        }
-
-        .container {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="wrapper">
-
-      <!-- Navigation -->
-      <nav>
-        <ul class="nav-left">
-          <li><a href="index.html">Loreena</a></li>
-        </ul>
-        <ul class="nav-right">
-          <li><a href="myworks.html">My works</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="getintouch.html">Get in Touch!</a></li>
-        </ul>
-      </nav>
-
-      <!-- Hero Section -->
-      <div class="hero">
-        <img src="Untitled_Artwork.jpg" alt="fish">
-        <h2>my works!</h2>
-      </div>
-
-
-      <h3>
-        Illustrations / Graphics
-      </h3>
-      <div class="container">
-        <div>
-          <img class="art-small" src="Artwork1.jpg" alt="Portrait">
-          <p>"Portrait 1" 2024, procreate </p>
-        </div>
-
-        <div>
-          <img class="art-small" src="blah.jpg" alt="blah">
-          <p>
-            "Blah" 2024, procreate
-          </p>
-        </div>
-
-        <div>
-          <img class="red-bg" src="snake.png" alt="snake illustration">
-          <p>"Snake illustration" 2025, procreate</p>
-        </div>
-
-        <div>
-          <img class="adjust-art" src="PortraitLisa.jpg" alt="description of image">
-          <p> "Portrait" 2023, procreate</p>
-        </div>
-      </div>
-
-      <h3> Photography </h3>
-
-      <div class="container">
-        <div>
-          <img class="art-small" src="dabin.jpg" alt="dabin">
-          <p>"Dabin KR" 2025 </p>
-        </div>
-        <div>
-          <img class="art-small" src="dabinkr.jpg" alt="dabin">
-          <p>"Dabin at Rebel" 2025</p>
-        </div>
-        <div>
-          <img class="art-small" src="Nightmode.jpeg" alt="Nightmode">
-          <p> "Nightmode" 2025</p>
-        </div>
-        <div>
-          <img class="art-small" src="toast.jpeg" alt="toast">
-        <p> "Toast" 2025</p>  
-        </div>
-      </div>
-
-      <footer>
-        © 2025 Loreena Lin — All Rights Reserved
-      </footer>
-
+    <!-- Hero Section -->
+    <div class="hero">
+      <img src="Untitled_Artwork.jpg" alt="fish">
+      <h2>my works!</h2>
     </div>
-  </body>
+
+    <!-- Illustrations / Graphics -->
+    <h3>Illustrations / Graphics</h3>
+    <div class="container">
+      <div>
+        <img class="art-small" src="Artwork1.jpg" alt="Portrait">
+        <p>"Portrait 1" 2024, procreate</p>
+      </div>
+      <div>
+        <img class="art-small" src="blah.jpg" alt="blah">
+        <p>"Blah" 2024, procreate</p>
+      </div>
+      <div>
+        <img class="red-bg" src="snake.png" alt="snake illustration">
+        <p>"Snake illustration" 2025, procreate</p>
+      </div>
+      <div>
+        <img class="adjust-art" src="PortraitLisa.jpg" alt="Portrait Lisa">
+        <p>"Portrait" 2023, procreate</p>
+      </div>
+    </div>
+
+    <!-- Photography -->
+    <h3>Photography</h3>
+    <div class="container">
+      <div>
+        <img class="art-small" src="dabin.jpg" alt="dabin">
+        <p>"Dabin KR" 2025</p>
+      </div>
+      <div>
+        <img class="art-small" src="dabinkr.jpg" alt="dabin">
+        <p>"Dabin at Rebel" 2025</p>
+      </div>
+      <div>
+        <img class="art-small" src="Nightmode.jpeg" alt="Nightmode">
+        <p>"Nightmode" 2025</p>
+      </div>
+      <div>
+        <img class="art-small" src="toast.jpeg" alt="toast">
+        <p>"Toast" 2025</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      © 2025 Loreena Lin — All Rights Reserved
+    </footer>
+
+  </div>
+</body>
 </html>
