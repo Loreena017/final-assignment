@@ -25,7 +25,6 @@
         padding: 0;
       }
 
-      /* Remove gaps for all elements */
       * {
         margin: 0;
         padding: 0;
@@ -128,9 +127,21 @@
         background-color: white;
         border: 1px solid black;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 20px;
+        text-align: center;
+      }
+
+      .art-small {
+        width: 350px;
+        height: auto;
+      }
+
+      .snake-small {
+        width: 350px;
+        height: auto;
       }
 
       /* Footer */
@@ -146,7 +157,6 @@
         width: 100%;
       }
 
-      /* Responsive */
       @media (max-width: 600px) {
         .hero h2 {
           font-size: 30px;
@@ -186,7 +196,7 @@
     <div class="wrapper">
 
       <!-- Navigation -->
-  <nav>
+      <nav>
         <ul class="nav-left">
           <li><a href="index.html">Loreena</a></li>
         </ul>
@@ -203,21 +213,25 @@
         <h2>my works!</h2>
       </div>
 
-      <!-- About Section -->
-      <div class="about">
-        <img src="loreena-min.jpeg" alt="Loreena">
-        <div class="about-text">
-          <h2>Hi I am Loreena!</h2>
-          <p>I am currently a GBDA student at the University of Waterloo, where I focus on game design, interactive media, and digital arts. I enjoy creating immersive experiences and exploring how design can tell engaging stories. This portfolio showcases my projects, including game prototypes, 3D models, and UX/UI designs. I am passionate about combining creativity and technology to solve problems and deliver unique digital experiences.</p>
-        </div>
-      </div>
-
       <!-- Portfolio -->
       <div class="container">
-        <div>Project 1</div>
-        <div>Project 2</div>
+        <div>
+          <img class="art-small" src="Artwork1.jpg" alt="Artwork 1">
+          <p>"Portrait 1" 2024, procreate </p>
+        </div>
+        <div>
+          <img class="snake-small" src="snake.png" alt="snake">
+          <p>"Snake illustration" 2025, procreate, photoshop</p>
+        </div>
         <div>Project 3</div>
         <div>Project 4</div>
       </div>
 
       <!-- Footer -->
+      <footer>
+        © 2024 Loreena
+      </footer>
+
+    </div>
+  </body>
+</html>
