@@ -4,7 +4,13 @@
     <meta charset="utf-8">
     <title>Assignment 3: Personal Webpage Design and Implementation</title>
     <!--created by Loreena-->
-
+    <!--AI USAGES:
+    Structuring navigation bar "list 'loreena' on the right and the rest on the right"
+    Layering images: "Place 'name of image' on top of 'name of image'"
+    Debugging and cleanning: "Clean up and fix"
+-->
+    
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -25,7 +31,6 @@
         padding: 0;
       }
 
-      /* Remove gaps for all elements */
       * {
         margin: 0;
         padding: 0;
@@ -40,7 +45,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         position: sticky;
         top: 0;
         z-index: 1000;
@@ -74,12 +78,20 @@
         width: 100%;
       }
 
-      .hero img {
+      .hero img.artwork {
         opacity: 50%;
         width: 100%;
         height: 400px;
         object-fit: cover;
         display: block;
+      }
+
+      .hero img.profile {
+        position: absolute;
+        top: 0%;
+        left: 5%;
+        width: 350px;
+        height: auto;
       }
 
       .hero h2 {
@@ -92,6 +104,7 @@
         font-size: 50px;
         text-align: right;
         -webkit-text-stroke: 2px black;
+        z-index: 5;
       }
 
       /* About Section */
@@ -106,12 +119,11 @@
         height: 400px;
         object-fit: cover;
       }
-      
+
       .about-text {
         width: 50%;
       }
 
-      /* Paper background for About section */
       .paper-bg {
         background-image: url("paper.jpg");
         background-size: cover;
@@ -126,6 +138,17 @@
 
       .paper-bg h2 {
         margin-bottom: 20px;
+      }
+
+      /* Me Section */
+      .me {
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      .me p {
+        font-size: 24px;
+        margin: 0;
       }
 
       /* More Section */
@@ -144,18 +167,9 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 65%;
+        width: 60%;
         height: auto;
         z-index: 10;
-      }
-
-      .container div {
-        background-color: white;
-        border: 1px solid black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
       }
 
       /* Footer */
@@ -190,7 +204,8 @@
 
       <!-- Hero Section -->
       <div class="hero">
-        <img src="Untitled_Artwork.jpg" alt="fish">
+        <img src="Untitled_Artwork.jpg" alt="fish" class="artwork">
+        <img src="profile.png" alt="profile" class="profile">
         <h2>hi this is lore!</h2>
       </div>
 
@@ -205,12 +220,17 @@
         </div>
       </div>
 
+      <!-- Me Section -->
+      <div class="me">
+        <p>Loreena Lin | GBDA Student | Designer</p>
+      </div>
+
       <!-- More Section -->
       <div class="more">
         <img class="more" src="montreal.jpeg" alt="background">
-        <img class="sketchbook" src="mysketchbook.png" alt="sketchbook">
+        <img class="sketchbook" src="sketchbookpage.jpg" alt="sketchbook">
       </div>
-      
+
       <!-- Footer -->
       <footer>
         © 2025 Loreena Lin — All Rights Reserved
