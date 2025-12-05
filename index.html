@@ -106,22 +106,47 @@
         height: 400px;
         object-fit: cover;
       }
-
+      
       .about-text {
         width: 50%;
-        font-size: 18px;
+      }
+
+      /* Paper background for About section */
+      .paper-bg {
+        background-image: url("paper.jpg");
+        background-size: cover;
+        background-position: center;
+        padding: 40px 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: rgba(255, 255, 255, 0.9);
-        padding: 20px;
+        border: 1px solid rgba(0,0,0,0.2);
+        line-height: 1.5;
       }
 
-      /* Portfolio Container */
-      .container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+      .paper-bg h2 {
+        margin-bottom: 20px;
+      }
+
+      /* More Section */
+      .more {
+        position: relative;
+      }
+
+      .more img.more {
         width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .more img.sketchbook {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 65%;
+        height: auto;
+        z-index: 10;
       }
 
       .container div {
@@ -144,36 +169,6 @@
         color: black;
         border: 1px solid black;
         width: 100%;
-      }
-
-      /* Responsive */
-      @media (max-width: 600px) {
-        .hero h2 {
-          font-size: 30px;
-        }
-
-        nav {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        nav ul {
-          flex-direction: column;
-          width: 100%;
-        }
-
-        nav li {
-          margin: 5px 0;
-        }
-
-        .about {
-          flex-direction: column;
-        }
-
-        .about img,
-        .about-text {
-          width: 100%;
-        }
       }
     </style>
   </head>
@@ -202,15 +197,25 @@
       <!-- About Section -->
       <div class="about">
         <img src="loreena-min.jpeg" alt="Loreena">
-        <div class="about-text">
+        <div class="about-text paper-bg">
           <h2>Hi I am Loreena!</h2>
-          <p>I am currently a GBDA student at the University of Waterloo, where I focus on game design, interactive media, and digital arts. I enjoy creating immersive experiences and exploring how design can tell engaging stories. This portfolio showcases my projects, including game prototypes, 3D models, and UX/UI designs. I am passionate about combining creativity and technology to solve problems and deliver unique digital experiences.</p>
+          <p>
+            I am currently a GBDA student at the University of Waterloo, where I focus on game design, interactive media, and digital arts. I enjoy creating immersive experiences and exploring how design can tell engaging stories. This portfolio showcases my projects, including game prototypes, 3D models, and UX/UI designs. I am passionate about combining creativity and technology to solve problems and deliver unique digital experiences.
+          </p>
         </div>
       </div>
 
-      <!-- Portfolio -->
+      <!-- More Section -->
       <div class="more">
-
+        <img class="more" src="montreal.jpeg" alt="background">
+        <img class="sketchbook" src="mysketchbook.png" alt="sketchbook">
       </div>
-
+      
       <!-- Footer -->
+      <footer>
+        © 2025 Loreena Lin — All Rights Reserved
+      </footer>
+
+    </div>
+  </body>
+</html>
