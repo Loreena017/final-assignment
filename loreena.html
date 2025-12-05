@@ -1,241 +1,269 @@
 <!DOCTYPE html>
 <html lang="en-CA">
-  <head>
-    <meta charset="utf-8">
-    <title>Assignment 3: Personal Webpage Design and Implementation</title>
-    <!--created by Loreena-->
-    <!--AI USAGES:
-    Structuring navigation bar "list 'loreena' on the right and the rest on the right"
-    Layering images: "Place 'name of image' on top of 'name of image'"
-    Debugging and cleanning: "Clean up and fix"
--->
-    
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <title>Assignment 3: Personal Webpage Design and Implementation</title>
+  <!--created by Loreena-->
+  <!--AI USAGES:
+    Structuring navigation bar
+    Layering images
+    Debugging and cleaning
+  -->
 
-    <style>
-      /* General Body Styles */
-      body {
-        font-family: "Open Sans", sans-serif;
-        font-size: 16px;
-        background-color: white;
-        margin: 0;
-        padding: 0;
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Quicksand", sans-serif;
+      font-size: 16px;
+      background-color: white;
+    }
+
+    .wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: white;
+      border: 1px solid black;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav li {
+      margin: 0 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-family: "Raleway", sans-serif;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: red;
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      width: 100%;
+    }
+
+    .hero img.artwork {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+      opacity: 0.5;
+    }
+
+    .hero img.profile {
+      position: absolute;
+      top: 0;
+      left: 5%;
+      width: 350px;
+      height: auto;
+    }
+
+    .hero h2 {
+      position: absolute;
+      top: 50%;
+      right: 5%;
+      transform: translateY(-50%);
+      color: white;
+      font-family: "Oswald", sans-serif;
+      font-size: 50px;
+      text-align: right;
+      -webkit-text-stroke: 2px black;
+      z-index: 5;
+    }
+
+    /* About Section */
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .about img {
+      width: 50%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .about-text {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .paper-bg {
+      background-image: url("paper.jpg");
+      background-size: cover;
+      background-position: center;
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid rgba(0,0,0,0.2);
+      line-height: 1.5;
+    }
+
+    .paper-bg h2 {
+      margin-bottom: 20px;
+    }
+
+    /* Me Section */
+    .me {
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .me p {
+      font-size: 24px;
+    }
+
+    /* More Section */
+    .more {
+      position: relative;
+    }
+
+    .more img.more {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .more img.sketchbook {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      height: auto;
+      z-index: 10;
+    }
+
+    /* Footer */
+    footer {
+      font-family: "Quicksand", sans-serif;
+      font-weight: 500;
+      text-align: center;
+      font-size: 24px;
+      background-color: white;
+      padding: 50px;
+      color: black;
+      border: 1px solid black;
+      width: 100%;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 30px;
       }
 
-      .wrapper {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 0;
+      .about {
+        flex-direction: column;
       }
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      /* Navigation */
-      nav {
-        background-color: white;
-        border: 1px solid black;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      }
-
-      nav ul {
-        list-style: none;
-        display: flex;
-      }
-
-      nav li {
-        margin: 0 10px;
-      }
-
-      nav a {
-        text-decoration: none;
-        color: black;
-        font-family: "Raleway", sans-serif;
-        font-weight: 500;
-      }
-
-      nav a:hover {
-        color: red;
-        text-decoration: underline;
-      }
-
-      /* Hero Section */
-      .hero {
-        position: relative;
+      .about img,
+      .about-text {
         width: 100%;
-      }
-
-      .hero img.artwork {
-        opacity: 50%;
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-        display: block;
+        height: auto;
       }
 
       .hero img.profile {
-        position: absolute;
-        top: 0%;
-        left: 5%;
-        width: 350px;
-        height: auto;
-      }
-
-      .hero h2 {
-        position: absolute;
-        top: 50%;
-        right: 5%;
-        transform: translateY(-50%);
-        color: white;
-        font-family: "Oswald", sans-serif;
-        font-size: 50px;
-        text-align: right;
-        -webkit-text-stroke: 2px black;
-        z-index: 5;
-      }
-
-      /* About Section */
-      .about {
-        display: flex;
-        align-items: stretch;
+        position: relative;
+        top: 0;
+        left: 0;
         width: 100%;
-      }
-
-      .about img {
-        width: 50%;
-        height: 400px;
-        object-fit: cover;
-      }
-
-      .about-text {
-        width: 50%;
-      }
-
-      .paper-bg {
-        background-image: url("paper.jpg");
-        background-size: cover;
-        background-position: center;
-        padding: 40px 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        border: 1px solid rgba(0,0,0,0.2);
-        line-height: 1.5;
-      }
-
-      .paper-bg h2 {
         margin-bottom: 20px;
       }
 
-      /* Me Section */
-      .me {
-        padding: 10px 0;
-        text-align: center;
-      }
-
-      .me p {
-        font-size: 24px;
-        margin: 0;
-      }
-
-      /* More Section */
-      .more {
-        position: relative;
-      }
-
-      .more img.more {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-
       .more img.sketchbook {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 60%;
-        height: auto;
-        z-index: 10;
+        width: 80%;
       }
+    }
+  </style>
+</head>
 
-      /* Footer */
-      footer {
-        font-family: "Oswald", sans-serif;
-        font-weight: 500;
-        text-align: center;
-        font-size: 35px;
-        background-color: white;
-        padding: 20px;
-        color: black;
-        border: 1px solid black;
-        width: 100%;
-      }
-    </style>
-  </head>
+<body>
+  <div class="wrapper">
 
-  <body>
-    <div class="wrapper">
+    <!-- Navigation -->
+    <nav>
+      <ul class="nav-left">
+        <li><a href="index.html">Loreena</a></li>
+      </ul>
+      <ul class="nav-right">
+        <li><a href="myworks.html">My works</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="getintouch.html">Get in Touch!</a></li>
+      </ul>
+    </nav>
 
-      <!-- Navigation -->
-      <nav>
-        <ul class="nav-left">
-          <li><a href="index.html">Loreena</a></li>
-        </ul>
-        <ul class="nav-right">
-          <li><a href="myworks.html">My works</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="getintouch.html">Get in Touch!</a></li>
-        </ul>
-      </nav>
-
-      <!-- Hero Section -->
-      <div class="hero">
-        <img src="Untitled_Artwork.jpg" alt="fish" class="artwork">
-        <img src="profile.png" alt="profile" class="profile">
-        <h2>hi this is lore!</h2>
-      </div>
-
-      <!-- About Section -->
-      <div class="about">
-        <img src="loreena-min.jpeg" alt="Loreena">
-        <div class="about-text paper-bg">
-          <h2>Hi I am Loreena!</h2>
-          <p>
-            I am currently a GBDA student at the University of Waterloo, where I focus on game design, interactive media, and digital arts. I enjoy creating immersive experiences and exploring how design can tell engaging stories. This portfolio showcases my projects, including game prototypes, 3D models, and UX/UI designs. I am passionate about combining creativity and technology to solve problems and deliver unique digital experiences.
-          </p>
-        </div>
-      </div>
-
-      <!-- Me Section -->
-      <div class="me">
-        <p>Loreena Lin | GBDA Student | Designer</p>
-      </div>
-
-      <!-- More Section -->
-      <div class="more">
-        <img class="more" src="montreal.jpeg" alt="background">
-        <img class="sketchbook" src="sketchbookpage.jpg" alt="sketchbook">
-      </div>
-
-      <!-- Footer -->
-      <footer>
-        © 2025 Loreena Lin — All Rights Reserved
-      </footer>
-
+    <!-- Hero Section -->
+    <div class="hero">
+      <img src="Untitled_Artwork.jpg" alt="fish" class="artwork">
+      <img src="profile.png" alt="profile" class="profile">
+      <h2>hi this is lore!</h2>
     </div>
-  </body>
+
+    <!-- About Section -->
+    <div class="about">
+      <img src="loreena-min.jpeg" alt="Loreena">
+      <div class="about-text paper-bg">
+        <h2>Hi I am Loreena!</h2>
+        <p>
+          I am currently a GBDA student at the University of Waterloo, where I focus on game design, interactive media, and digital arts. I enjoy creating immersive experiences and exploring how design can tell engaging stories. This portfolio showcases my projects, including game prototypes, 3D models, and UX/UI designs. I am passionate about combining creativity and technology to solve problems and deliver unique digital experiences.
+        </p>
+      </div>
+    </div>
+
+    <!-- Me Section -->
+    <div class="me">
+      <p>Loreena Lin | GBDA Student | Designer</p>
+    </div>
+
+    <!-- More Section -->
+    <div class="more">
+      <img class="more" src="montreal.jpeg" alt="background">
+      <img class="sketchbook" src="sketchbookpage.jpg" alt="sketchbook">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      © 2025 Loreena Lin — All Rights Reserved
+    </footer>
+
+  </div>
+</body>
 </html>
