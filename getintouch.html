@@ -5,18 +5,21 @@
   <title>Assignment 3: Personal Webpage Design and Implementation</title>
   <!--created by Loreena-->
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <style>
-    /* General Body Styles */
-    body {
-      font-family: "Open Sans", sans-serif;
-      font-size: 16px;
-      background-color: white;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Open Sans", sans-serif;
+      background-color: white;
     }
 
     .wrapper {
@@ -25,12 +28,7 @@
       padding: 0;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* Navigation */
     nav {
       background-color: white;
       border: 1px solid black;
@@ -38,7 +36,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -66,17 +63,18 @@
       text-decoration: underline;
     }
 
+    /* Hero Section */
     .hero {
       position: relative;
       width: 100%;
     }
 
     .hero img {
-      opacity: 50%;
       width: 100%;
-      height: 400px;
+      height: 250px;
       object-fit: cover;
       display: block;
+      opacity: 50%;
     }
 
     .hero h2 {
@@ -87,10 +85,11 @@
       color: white;
       font-family: "Oswald", sans-serif;
       font-size: 50px;
-      text-align: right;
+      text-align: left;
       -webkit-text-stroke: 2px black;
     }
 
+    /* Contact Section */
     .contact-banner {
       position: relative;
       width: 100%;
@@ -109,11 +108,9 @@
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: left;
-
       color: black;
       font-size: 20px;
-      font-family: "Open Sans", sans-serif;
-
+      font-family: "Quicksand", sans-serif;
       background: none;
       padding: 0;
     }
@@ -185,20 +182,22 @@
       <img src="Untitled_Artwork.jpg" alt="fish">
       <h2>Get in Touch!</h2>
     </div>
-    
+
     <!-- Contact Section -->
     <div class="contact-banner">
       <img src="letter.jpg" alt="letter">
       <div class="contact-text">
-        <p>email: <a href="mailto:linloreena@gmail.com">linloreena@gmail.com</a></p>
-        <p>phone: (123) 123-1234</p>
-        <p>linkedin: <a href="https://www.linkedin.com/in/loreenalin/">linkedin.com/in/loreenalin</a></p>
+        <p>My contacts!</p>
+        <p>Email: <a href="mailto:linloreena@gmail.com">linloreena@gmail.com</a></p>
+        <p>Phone: (123) 123-1234</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/loreenalin/">linkedin.com/in/loreenalin</a></p>
       </div>
     </div>
 
-      <footer>
-        © 2025 Loreena Lin — All Rights Reserved
-      </footer>
+    <!-- Footer -->
+    <footer>
+      © 2025 Loreena Lin — All Rights Reserved
+    </footer>
 
   </div>
 </body>
