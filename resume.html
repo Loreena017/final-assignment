@@ -1,211 +1,265 @@
 <!DOCTYPE html>
 <html lang="en-CA">
-<head>
-  <meta charset="utf-8">
-  <title>Assignment 3: Personal Webpage Design and Implementation</title>
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment 3: Personal Webpage Design and Implementation</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-  <style>
-    /* Reset and general styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Open Sans", sans-serif;
-      font-size: 16px;
-      background-color: white;
-    }
-
-    .wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    /* Navigation */
-    nav {
-      background-color: white;
-      border: 1px solid black;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-    }
-
-    nav li {
-      margin: 0 10px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: black;
-      font-family: "Raleway", sans-serif;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: red;
-      text-decoration: underline;
-    }
-
-    /* Hero Section */
-    .hero {
-      position: relative;
-      width: 100%;
-    }
-
-    .hero img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      display: block;
-      opacity: 50%;
-    }
-
-    .hero h2 {
-      position: absolute;
-      top: 50%;
-      right: 5%;
-      transform: translateY(-50%);
-      color: white;
-      font-family: "Oswald", sans-serif;
-      font-size: 50px;
-      text-align: right;
-      -webkit-text-stroke: 2px black;
-    }
-
-    /* Resume Section */
-    .resume-container {
-      width: 100%;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      margin: 60px 0;
-    }
-
-    .resume-container img.resume-img {
-      width: 75%;
-      height: auto;
-      border: 1px solid #ccc;
-    }
-
-    .sticker {
-      position: absolute;
-      top: -25px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 10;
-    }
-
-    .sticker img {
-      width: 80px;
-      height: auto;
-    }
-    
-    .sticker-bottom-left {
-  position: absolute;
-  bottom: 10px;
-  left: 75px;
-  z-index: 10;
-}
-
-.sticker-bottom-left img {
-  width: 100px;
-  height: auto;
-}
-
-    /* Footer */
-    footer {
-      font-family: "Quicksand", sans-serif;
-      font-weight: 500;
-      text-align: center;
-      font-size: 24px;
-      background-color: white;
-      padding: 50px;
-      color: black;
-      border: 1px solid black;
-      width: 100%;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      .hero h2 {
-        font-size: 30px;
+    <style>
+      /* Reset and general styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
 
+      body {
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        background-color: white;
+      }
+
+      .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* Navigation */
       nav {
-        flex-direction: column;
-        align-items: flex-start;
+        background-color: white;
+        border: 1px solid black;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       }
 
       nav ul {
-        flex-direction: column;
-        width: 100%;
+        list-style: none;
+        display: flex;
       }
 
       nav li {
-        margin: 5px 0;
+        margin: 0 10px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: black;
+        font-family: "Raleway", sans-serif;
+        font-weight: 500;
+      }
+
+      nav a:hover {
+        color: red;
+        text-decoration: underline;
+      }
+
+      /* Hero Section */
+      .hero {
+        position: relative;
+        width: 100%;
+      }
+
+      .hero img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+        opacity: 50%;
+      }
+
+      .hero h2 {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+        color: white;
+        font-family: "Oswald", sans-serif;
+        font-size: 50px;
+        text-align: right;
+        -webkit-text-stroke: 2px black;
+      }
+
+      /* Resume Section */
+      .resume-container {
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin: 60px 0;
       }
 
       .resume-container img.resume-img {
+        width: 75%;
+        height: auto;
+        border: 1px solid #ccc;
+      }
+
+      .sticker {
+        position: absolute;
+        top: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+      }
+
+      .sticker img {
+        width: 80px;
+        height: auto;
+      }
+
+      .sticker-bottom-left {
+        position: absolute;
+        bottom: 65px;
+        left: 75px;
+        z-index: 10;
+      }
+
+      .sticker-bottom-left img {
+        width: 100px;
+        height: auto;
+      }
+
+      .snoopy-layered {
+        position: absolute;
+        bottom: -20px;
+        left: 120px;
+        z-index: 5;
+      }
+
+      .snoopy-layered img {
+        width: 125px;
+        height: auto;
+      }
+
+      .note-layered {
+        position: absolute;
+        bottom: -25px;
+        right: 75px;
+        z-index: 15;
+      }
+
+      .note-layered img {
+        width: 200px;
+        height: auto;
+        display: block;
+      }
+
+      .note-layered .note-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "Quicksand", sans-serif;
+        /* changed font */
+        font-size: 18px;
+        color: black;
+        font-weight: bold;
+        pointer-events: none;
+        /* allows clicking the note itself to still work */
+      }
+
+
+
+      /* Footer */
+      footer {
+        font-family: "Quicksand", sans-serif;
+        font-weight: 500;
+        text-align: center;
+        font-size: 24px;
+        background-color: white;
+        padding: 50px;
+        color: black;
+        border: 1px solid black;
         width: 100%;
       }
-    }
-  </style>
-</head>
 
-<body>
-  <div class="wrapper">
+      /* Responsive */
+      @media (max-width: 600px) {
+        .hero h2 {
+          font-size: 30px;
+        }
 
-    <!-- Navigation -->
-    <nav>
-      <ul class="nav-left">
-        <li><a href="index.html">Loreena</a></li>
-      </ul>
-      <ul class="nav-right">
-        <li><a href="myworks.html">My works</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="getintouch.html">Get in Touch!</a></li>
-      </ul>
-    </nav>
+        nav {
+          flex-direction: column;
+          align-items: flex-start;
+        }
 
-    <!-- Hero Section -->
-    <div class="hero">
-      <img src="Untitled_Artwork.jpg" alt="fish">
-      <h2>My Resume!</h2>
+        nav ul {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        nav li {
+          margin: 5px 0;
+        }
+
+        .resume-container img.resume-img {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+
+      <!-- Navigation -->
+      <nav>
+        <ul class="nav-left">
+          <li><a href="index.html">Loreena</a></li>
+        </ul>
+        <ul class="nav-right">
+          <li><a href="myworks.html">My works</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="getintouch.html">Get in Touch!</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hero Section -->
+      <div class="hero">
+        <img src="Untitled_Artwork.jpg" alt="fish">
+        <h2>My Resume!</h2>
+      </div>
+
+      <!-- Resume Section -->
+      <div class="resume-container">
+        <div class="sticker">
+          <img src="sticker.jpeg" alt="sticker">
+        </div>
+        <img class="resume-img" src="Resume.jpg" alt="Loreena’s Resume">
+
+        <div class="sticker-bottom-left">
+          <img src="sticker3.png" alt="another sticker">
+        </div>
+
+        <div class="snoopy-layered">
+          <img src="stamp.png" alt="Snoopy stamp">
+        </div>
+        <div class="note-layered">
+          <a href="Resume.jpg" download="Resume.jpg">
+            <img src="note.png" alt="sticky note">
+            <span class="note-text">download resume</span>
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- Footer -->
+      <footer>
+        © 2025 Loreena Lin — All Rights Reserved
+      </footer>
+
     </div>
-
-    <!-- Resume Section -->
-<div class="resume-container">
-  <div class="sticker">
-    <img src="sticker.jpeg" alt="sticker">
-  </div>
-  <img class="resume-img" src="Resume.jpg" alt="Loreena’s Resume">
-  <div class="sticker-bottom-left">
-    <img src="sticker3.png" alt="another sticker">
-  </div>
-</div>
-
-    <!-- Footer -->
-    <footer>
-      © 2025 Loreena Lin — All Rights Reserved
-    </footer>
-
-  </div>
-</body>
+  </body>
 </html>
