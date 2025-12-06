@@ -26,7 +26,9 @@
     body {
       font-family: "Quicksand", sans-serif;
       font-size: 16px;
+      line-height: 1.6;
       background-color: white;
+      color: black;
     }
 
     .wrapper {
@@ -62,6 +64,7 @@
       color: black;
       font-family: "Raleway", sans-serif;
       font-weight: 500;
+      font-size: 16px;
     }
 
     nav a:hover {
@@ -98,7 +101,7 @@
       transform: translateY(-50%);
       color: white;
       font-family: "Oswald", sans-serif;
-      font-size: 50px;
+      font-size: 48px;
       text-align: right;
       -webkit-text-stroke: 2px black;
       z-index: 5;
@@ -120,7 +123,7 @@
       width: 50%;
       display: flex;
       justify-content: center;
-      align-items: left;
+      align-items: flex-start;
     }
 
     .paper-bg {
@@ -132,11 +135,16 @@
       flex-direction: column;
       justify-content: center;
       border: 1px solid rgba(0,0,0,0.2);
-      line-height: 1.5;
     }
 
     .paper-bg h2 {
+      font-size: 32px;
       margin-bottom: 20px;
+    }
+
+    .paper-bg p {
+      font-size: 16px;
+      line-height: 1.6;
     }
 
     /* More Section */
@@ -171,12 +179,13 @@
     }
 
     .more-text h2 {
-      font-size: 40px;
-      margin-bottom: 10px;
+      font-size: 32px;
+      margin-bottom: 15px;
     }
 
     .more-text p {
       font-size: 16px;
+      line-height: 1.6;
     }
 
     /* Footer */
@@ -184,14 +193,13 @@
       font-family: "Quicksand", sans-serif;
       font-weight: 500;
       text-align: center;
-      font-size: 24px;
+      font-size: 18px;
       background-color: white;
       padding: 50px;
       color: black;
       border: 1px solid black;
       width: 100%;
     }
-
   </style>
 </head>
 
@@ -214,7 +222,7 @@
     <div class="hero">
       <img src="Untitled_Artwork.jpg" alt="fish" class="artwork">
       <img src="profile.png" alt="profile" class="profile">
-      <h2>hi this is lore!</h2>
+      <h2>Hi this is Lore!</h2>
     </div>
 
     <!-- About Section -->
@@ -233,10 +241,8 @@
       <img class="more" src="sky.jpeg" alt="background">
 
       <div class="more-text">
-        <h2>My works</h2>
-        <p> Currently pursuing my creative path, I’ve been drawn to art for as long as I can remember. I’m fascinated by people—characters, portraits, and the quiet stories held in their expressions.
-
-Photography is a natural extension of that curiosity. I’m always chasing moments and places that feel alive, capturing them so I can return to the emotion and atmosphere long after they’ve passed. Through both mediums, I try to hold onto fleeting fragments of life and let them speak again.</p>
+        <h2>My Works</h2>
+        <p>Currently pursuing my creative path, I’ve been drawn to art for as long as I can remember. I’m fascinated by people—their expressions, gestures, and the quiet stories they carry. Portraits and character studies allow me to explore these subtleties, while photography gives me a way to capture moments and places that feel alive. I chase light, shadow, and fleeting glimpses of emotion, preserving them so I can return to the feeling long after the moment has passed. Beyond technique, my work is an attempt to connect—with the world, with others, and with the fragments of life that often go unnoticed. Each drawing, each photograph, becomes a space where time pauses, stories linger, and emotions resurface, inviting both me and the viewer to look closer, feel deeper, and remember.</p>
       </div>
 
       <img class="sketchbook" src="sketchbookpage.jpg" alt="sketchbook">
