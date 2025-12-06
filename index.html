@@ -108,48 +108,36 @@
     }
 
     /* About Section */
-    .about {
-      display: flex;
-      width: 100%;
-    }
+    /* About Section */
+.about {
+  display: flex;
+  width: 100%;
+  gap: 0; /* remove extra gaps */
+}
 
-    .about img {
-      width: 40%;
-      height: auto;
-      object-fit: cover;
-    }
+.about img {
+  width: 50%; /* image takes half */
+  height: auto;
+  object-fit: cover;
+}
 
-    .about-text {
-      width: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-    }
+.about-text {
+  width: 50%; /* text takes half */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0; /* remove extra padding if needed */
+}
 
-    .paper-bg {
-      background-image: url("paper.jpg");
-      background-size: cover;
-      background-position: center;
-      padding: 40px 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+.paper-bg {
+  background-image: url("paper.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 30px 20px; /* slightly smaller padding to reduce space */
+  display: flex;
+  flex-direction: column;
+}
 
-    .paper-bg img {
-      opacity: 80%;
-      width: 60%;
-    }
-    
-    .paper-bg h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-
-    .paper-bg p {
-      font-size: 16px;
-      line-height: 1.6;
-    }
 
     /* More Section */
     .more {
