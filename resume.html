@@ -113,9 +113,21 @@
     }
 
     .sticker img {
-      width: 60px;
+      width: 80px;
       height: auto;
     }
+    
+    .sticker-bottom-left {
+  position: absolute;
+  bottom: 10px;
+  left: 75px;
+  z-index: 10;
+}
+
+.sticker-bottom-left img {
+  width: 100px;
+  height: auto;
+}
 
     /* Footer */
     footer {
@@ -179,12 +191,15 @@
     </div>
 
     <!-- Resume Section -->
-    <div class="resume-container">
-      <div class="sticker">
-        <img src="sticker.jpeg" alt="sticker">
-      </div>
-      <img class="resume-img" src="Resume.jpg" alt="Loreena’s Resume">
-    </div>
+<div class="resume-container">
+  <div class="sticker">
+    <img src="sticker.jpeg" alt="sticker">
+  </div>
+  <img class="resume-img" src="Resume.jpg" alt="Loreena’s Resume">
+  <div class="sticker-bottom-left">
+    <img src="sticker3.png" alt="another sticker">
+  </div>
+</div>
 
     <!-- Footer -->
     <footer>
