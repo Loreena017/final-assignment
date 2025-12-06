@@ -6,7 +6,6 @@
   <!--created by Loreena-->
 
   <!-- Google Fonts -->
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -19,7 +18,7 @@
     }
 
     body {
-      font-family: "Open Sans", sans-serif;
+      font-family: "Quicksand", sans-serif;
       font-size: 16px;
       background-color: white;
     }
@@ -76,7 +75,7 @@
       height: 250px;
       object-fit: cover;
       display: block;
-      opacity: 50%;
+      opacity: 0.5;
     }
 
     .hero h2 {
@@ -94,33 +93,31 @@
     /* Headings and Paragraphs */
     h3 {
       font-size: 32px;
-      text-align: left;
+      font-family: "Oswald," sans-serif;
       color: black;
-      padding: 10px;
-      margin: 10px 0;
+      margin: 20px 10px 10px 10px;
+      padding: 20px;
     }
 
     p {
+      font-family: "Quicksand," sans-serif;
       font-size: 16px;
-      padding: 10px 0;
+      margin: 10px 0;
     }
 
     /* Art / Works Grid */
     .container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      width: 100%;
       gap: 20px;
       margin-bottom: 40px;
+      padding: 0 10px;
     }
 
     .container div {
-      background-color: white;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      padding: 10px;
       text-align: center;
     }
 
@@ -131,14 +128,14 @@
 
     .adjust-art {
       width: 350px;
-      height: 60%;
+      height: 500px;
       object-fit: cover;
     }
 
     .red-bg {
       background-color: #8B0000;
       width: 350px;
-      height: 60%;
+      height: 500px;
       object-fit: cover;
     }
 
@@ -153,39 +150,6 @@
       color: black;
       border: 1px solid black;
       width: 100%;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      .hero h2 {
-        font-size: 30px;
-      }
-
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav ul {
-        flex-direction: column;
-        width: 100%;
-      }
-
-      nav li {
-        margin: 5px 0;
-      }
-
-      .container {
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
-
-      .art-small,
-      .adjust-art,
-      .red-bg {
-        width: 100%;
-        height: auto;
-      }
     }
   </style>
 </head>
@@ -207,7 +171,7 @@
 
     <!-- Hero Section -->
     <div class="hero">
-      <img src="Untitled_Artwork.jpg" alt="fish">
+      <img src="Untitled_Artwork.jpg" alt="Hero Artwork">
       <h2>my works!</h2>
     </div>
 
@@ -215,20 +179,20 @@
     <h3>Illustrations / Graphics</h3>
     <div class="container">
       <div>
-        <img class="art-small" src="Artwork1.jpg" alt="Portrait">
-        <p>"Portrait 1" 2024, procreate</p>
+        <img class="art-small" src="Artwork1.jpg" alt="Portrait 1">
+        <p>"Portrait 1" 2025, Procreate</p>
       </div>
       <div>
-        <img class="art-small" src="blah.jpg" alt="blah">
-        <p>"Blah" 2024, procreate</p>
+        <img class="art-small" src="blah.jpg" alt="Blah">
+        <p>"Blah" 2025, Procreate</p>
       </div>
       <div>
-        <img class="red-bg" src="snake.png" alt="snake illustration">
-        <p>"Snake illustration" 2025, procreate</p>
+        <img class="red-bg" src="snake.png" alt="Snake Illustration">
+        <p>"Snake illustration" 2025, Procreate</p>
       </div>
       <div>
         <img class="adjust-art" src="PortraitLisa.jpg" alt="Portrait Lisa">
-        <p>"Portrait" 2023, procreate</p>
+        <p>"Portrait 2" 2023, Procreate</p>
       </div>
     </div>
 
@@ -236,11 +200,11 @@
     <h3>Photography</h3>
     <div class="container">
       <div>
-        <img class="art-small" src="dabin.jpg" alt="dabin">
+        <img class="art-small" src="dabin.jpg" alt="Dabin KR">
         <p>"Dabin KR" 2025</p>
       </div>
       <div>
-        <img class="art-small" src="dabinkr.jpg" alt="dabin">
+        <img class="art-small" src="dabinkr.jpg" alt="Dabin at Rebel">
         <p>"Dabin at Rebel" 2025</p>
       </div>
       <div>
@@ -248,7 +212,7 @@
         <p>"Nightmode" 2025</p>
       </div>
       <div>
-        <img class="art-small" src="toast.jpeg" alt="toast">
+        <img class="art-small" src="toast.jpeg" alt="Toast">
         <p>"Toast" 2025</p>
       </div>
     </div>

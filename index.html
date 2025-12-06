@@ -5,9 +5,9 @@
   <title>Assignment 3: Personal Webpage Design and Implementation</title>
   <!--created by Loreena-->
   <!--AI USAGES:
-    Structuring navigation bar
-    Layering images
-    Debugging and cleaning
+    Structuring navigation bar: *place "loreena on the left" and the other list item on the right
+    Layering images: place *image name* on top of *image name*
+    Debugging and cleaning: fix and clean up
   -->
 
   <!-- Google Fonts -->
@@ -107,7 +107,6 @@
     /* About Section */
     .about {
       display: flex;
-      flex-wrap: wrap;
       width: 100%;
     }
 
@@ -140,19 +139,10 @@
       margin-bottom: 20px;
     }
 
-    /* Me Section */
-    .me {
-      padding: 10px 0;
-      text-align: center;
-    }
-
-    .me p {
-      font-size: 24px;
-    }
-
     /* More Section */
     .more {
       position: relative;
+      margin-top: -5px;
     }
 
     .more img.more {
@@ -164,11 +154,29 @@
     .more img.sketchbook {
       position: absolute;
       top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 60%;
+      right: 10%;
+      transform: translateY(-50%);
+      width: 45%;
       height: auto;
-      z-index: 10;
+    }
+
+    .more-text {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+      color: black;
+      font-family: "Quicksand", sans-serif;
+      max-width: 35%;
+    }
+
+    .more-text h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .more-text p {
+      font-size: 16px;
     }
 
     /* Footer */
@@ -184,34 +192,6 @@
       width: 100%;
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero h2 {
-        font-size: 30px;
-      }
-
-      .about {
-        flex-direction: column;
-      }
-
-      .about img,
-      .about-text {
-        width: 100%;
-        height: auto;
-      }
-
-      .hero img.profile {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        margin-bottom: 20px;
-      }
-
-      .more img.sketchbook {
-        width: 80%;
-      }
-    }
   </style>
 </head>
 
@@ -248,14 +228,17 @@
       </div>
     </div>
 
-    <!-- Me Section -->
-    <div class="me">
-      <p>Loreena Lin | GBDA Student | Designer</p>
-    </div>
-
     <!-- More Section -->
     <div class="more">
-      <img class="more" src="montreal.jpeg" alt="background">
+      <img class="more" src="sky.jpeg" alt="background">
+
+      <div class="more-text">
+        <h2>My works</h2>
+        <p> Currently pursuing my creative path, I’ve been drawn to art for as long as I can remember. I’m fascinated by people—characters, portraits, and the quiet stories held in their expressions.
+
+Photography is a natural extension of that curiosity. I’m always chasing moments and places that feel alive, capturing them so I can return to the emotion and atmosphere long after they’ve passed. Through both mediums, I try to hold onto fleeting fragments of life and let them speak again.</p>
+      </div>
+
       <img class="sketchbook" src="sketchbookpage.jpg" alt="sketchbook">
     </div>
 
